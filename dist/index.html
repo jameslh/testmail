@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width">
+		<title>testmail</title>
+	</head>
+	<body>
+
+		<nav class="navbar navbar-dark bg-primary p-1">
+			<span class="navbar-brand">
+				<svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M2 26 L30 26 30 6 2 6 Z M2 6 L16 16 30 6" /></svg>
+				<em>testmail</em>
+			</span>
+		</nav>
+		
+		<div class="container-fluid py-2">
+
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="card">
+						<div class="card-header">
+							<div class="btn-group float-right" role="group">
+								<button type="button" class="btn btn-sm btn-primary refreshBtn"><svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M29 16 C29 22 24 29 16 29 8 29 3 22 3 16 3 10 8 3 16 3 21 3 25 6 27 9 M20 10 L27 9 28 2" /></svg> Refresh</button>
+								<button type="button" class="btn btn-sm btn-danger deleteAllEmailBtn"><svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M28 6 L6 6 8 30 24 30 26 6 4 6 M16 12 L16 24 M21 12 L20 24 M11 12 L12 24 M12 6 L13 2 19 2 20 6" /></svg> Delete All</button>
+							</div>
+							<h5 class="card-title float-left pr-2">Received</h5>
+							<span class="card-text text-primary server-status"></span>
+						</div>
+						<div class="card-body">
+							<table id="messages" class="dataTable table table-sm table-striped table-bordered table-condensed" cellpadding="0" cellspacing="0" width="100%"></table>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-6">
+					<div id="mail-container" class="card">
+						<div class="card-header">
+							<ul class="nav nav-tabs card-header-tabs" role="tablist">
+								<li class="nav-item"><a class="nav-link active" href="#mail-message" data-toggle="tab">Message</a></li>
+								<li class="nav-item"><a class="nav-link" href="#mail-raw" data-toggle="tab">JSON</a></li>
+							</ul>
+						</div>
+						<div id="mail-tabs" class="card-body">
+							<div class="mail-header"></div>
+							<div class="tab-content">
+								<div id="mail-message" class="tab-pane active" role="tabpanel">
+									<iframe src="about:blank" style="width:100%; " frameborder="0" scrolling="no" sandbox="allow-same-origin"></iframe>
+								</div>
+								<div id="mail-raw" class="tab-pane" role="tabpanel">
+									<div id="mail-raw-content"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		
+	<script type="text/javascript" src="index.06f0c08e73004642ebfb.js"></script></body>
+</html>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width">
+		<title><%= htmlWebpackPlugin.options.title %></title>
+	</head>
+	<body>
+
+		<nav class="navbar navbar-dark bg-primary p-1">
+			<span class="navbar-brand">
+				<%= require('icons').iconMail(24) %>
+				<em><%= htmlWebpackPlugin.options.title %></em>
+			</span>
+		</nav>
+		
+		<div class="container-fluid py-2">
+
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="card">
+						<div class="card-header">
+							<div class="btn-group float-right" role="group">
+								<button type="button" class="btn btn-sm btn-primary refreshBtn"><%= require('icons').iconReload() %> Refresh</button>
+								<button type="button" class="btn btn-sm btn-danger deleteAllEmailBtn"><%= require('icons').iconTrash() %> Delete All</button>
+							</div>
+							<h5 class="card-title float-left pr-2">Received</h5>
+							<span class="card-text text-primary server-status"></span>
+						</div>
+						<div class="card-body">
+							<table id="messages" class="dataTable table table-sm table-striped table-bordered table-condensed" cellpadding="0" cellspacing="0" width="100%"></table>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-6">
+					<div id="mail-container" class="card">
+						<div class="card-header">
+							<ul class="nav nav-tabs card-header-tabs" role="tablist">
+								<li class="nav-item"><a class="nav-link active" href="#mail-message" data-toggle="tab">Message</a></li>
+								<li class="nav-item"><a class="nav-link" href="#mail-raw" data-toggle="tab">JSON</a></li>
+							</ul>
+						</div>
+						<div id="mail-tabs" class="card-body">
+							<div class="mail-header"></div>
+							<div class="tab-content">
+								<div id="mail-message" class="tab-pane active" role="tabpanel">
+									<iframe src="about:blank" style="width:100%; " frameborder="0" scrolling="no" sandbox="allow-same-origin"></iframe>
+								</div>
+								<div id="mail-raw" class="tab-pane" role="tabpanel">
+									<div id="mail-raw-content"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		
+	</body>
+</html>

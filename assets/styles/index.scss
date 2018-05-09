@@ -1,0 +1,23 @@
+@import "_variables";
+@import "bootstrap/scss/bootstrap.scss";
+
+#messages td {cursor: default;}
+#mail-message {border:thin solid $gray-300;}
+#mail-raw-content pre { overflow: scroll; border: thin solid $gray-300; background-color: $gray-100;}
+.action-col {width: 1%; white-space: nowrap; text-align: center;}
+.icon-svg {vertical-align: bottom;}
+
+.loading-icon {
+    display: inline-block;
+    position: relative;
+    background: $primary;
+    margin-left: 10px;
+    width: 12px;
+    height: 12px;
+    animation: rota 3s infinite cubic-bezier(0.55, 0.055, 0.675, 0.19) alternate;
+}
+
+@keyframes rota {
+    50% { transform: rotate(180deg); background: $info; }
+    100%  { transform: rotate(360deg); background: $primary; }
+}

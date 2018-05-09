@@ -1,0 +1,16 @@
+## System and generated files
+.idea
+.DS_Store
+.sass-cache
+Thumbs.db
+
+## Directories
+log/
+dist/
+node_modules/
+bower_components/
+server/data/
+
+## Files
+result.xml
+npm-debug.log
